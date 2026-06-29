@@ -25,6 +25,48 @@
             overflow-x: hidden;
         }
 
+        
+        .profilova-fotka {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            margin-bottom: 25px;
+            transition: transform 0.4s ease, border-color 0.4s ease;
+        }
+
+        .profilova-fotka:hover {
+            transform: scale(1.02);
+            border-color: #888;
+        }
+
+        .linkedin-odkaz {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .linkedin-odkaz:hover {
+            transform: translateY(-3px);
+        }
+
+        .linkedin-logo {
+            width: 32px;
+            height: 32px;
+            fill: #aaa;
+            transition: fill 0.3s ease;
+        }
+
+        .linkedin-odkaz:hover .linkedin-logo {
+            fill: #0077b5; 
+        }
+        
+
         @keyframes gradientAnimace {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
