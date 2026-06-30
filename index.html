@@ -4,21 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio Jáchyma Vondráčka. Profesionální 3D modely, grafický design, UI/UX, ilustrace a fotografie.">
     <title>Portfolio - Jáchym Vondráček</title>
 
-    <link rel="icon"  href="./images/favicon/favicon_.png">
+    <link rel="preload" href="./images/fotky/profil_fotka.png" as="image">
+    <link rel="icon" href="./images/favicon/favicon_.png">
     <link rel="stylesheet" href="./assets/style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
-
-    
 </head>
 
 <body>
+    <div class="animovane-pozadi" aria-hidden="true"></div>
 
     <nav class="hlavni-navigace">
-        <div class="hamburger" id="hamburger-menu">
+        <div class="hamburger" id="hamburger-menu" aria-label="Otevřít navigaci" aria-expanded="false" role="button" tabindex="0">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -30,15 +32,14 @@
             <a href="#plakaty">Plakáty</a>
             <a href="#mockupy">Mockupy</a>
             <a href="#fotografie">Fotografie</a>
-            <a href="#obaly">Obaly hudebních alb</a>
-            <a href="#ilustrace">Ilustrace & Magazín</a>
-            <a href="#ui/ux">Ukázka UI/UX</a>
+            <a href="#obaly">Obaly</a>
+            <a href="#ilustrace">Ilustrace</a>
+            <a href="#ui-ux">UI/UX</a>
             <a href="#kontakt">Kontakt</a>
         </div>
     </nav>
 
    <header id="uvod">
-       
         <img src="./images/fotky/profil_fotka.png" alt="Portrét - Jáchym Vondráček" class="profilova-fotka">
         
         <h1 id="jmeno-autora">Jáchym Vondráček</h1>
@@ -59,103 +60,117 @@
 
         <div id="galerie">
             
-            <h2 class="kategorie-nadpis" id="3D_modely">3D Modely</h2>
-            <section class="gallery-container">
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/3D_modely/3D_cerealie.png" alt="3D vizualizace balení cereálií" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/3D_modely/3D_obchod.png" alt="3D model obchodu" loading="lazy">
-                </div>
-            </section>
-
-            <h2 class="kategorie-nadpis" id="plakaty">Plakáty</h2>
-            <section class="gallery-container">
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/killer bee/plakát.jpg" alt="Plakát Killer Bee 1" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/killer bee/plakat_2.jpg" alt="Plakát Killer Bee 2" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/killer bee/plakat_3.jpg" alt="Plakát Killer Bee 3" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/killer bee/plakat4.png" alt="Plakát Killer Bee 4" loading="lazy">
+            <section id="3D_modely">
+                <h2 class="kategorie-nadpis">3D Modely</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/3D_modely/3D_cerealie.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/3D_modely/3D_cerealie.png" alt="3D vizualizace balení cereálií" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/3D_modely/3D_obchod.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/3D_modely/3D_obchod.png" alt="3D model interiéru obchodu" loading="lazy">
+                    </div>
                 </div>
             </section>
 
-            <h2 class="kategorie-nadpis" id="mockupy">Mockupy</h2>
-            <section class="gallery-container">
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/killer bee/vizitky.jpg" alt="vizitky" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/killer bee/razitko.jpg" alt="razitko" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/killer bee/store_front.png" alt="ceduel1" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/killer bee/cedule.png" alt="ceduel2" loading="lazy">
-                </div>
-            </section>
-
-            <h2 class="kategorie-nadpis" id="fotografie">Fotografie</h2>
-            <section class="gallery-container">
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/fotky/5548de152771453.632383ae49acb.jpg" alt="Umělecká fotografie 1" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/fotky/66297e152771453.632383ae462b8.jpg" alt="Umělecká fotografie 2" loading="lazy">
-                </div>
-                 <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/fotky/a51ce0152771453.632383ae46b3b.jpg" alt="Umělecká fotografie 3" loading="lazy">
+            <section id="plakaty">
+                <h2 class="kategorie-nadpis">Plakáty</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/killer bee/plakát.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/plakát.jpg" alt="Grafický návrh plakátu Killer Bee 1" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/killer bee/plakat_2.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/plakat_2.jpg" alt="Grafický návrh plakátu Killer Bee 2" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/killer bee/plakat_3.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/plakat_3.jpg" alt="Grafický návrh plakátu Killer Bee 3" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/killer bee/plakat4.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/plakat4.png" alt="Grafický návrh plakátu Killer Bee 4" loading="lazy">
+                    </div>
                 </div>
             </section>
 
-            <h2 class="kategorie-nadpis" id="obaly">Obaly hudebních alb</h2>
-            <section class="gallery-container">
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/cd cover/main_cover.jpg" alt="Hlavní obal CD" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/cd cover/cd.jpg" alt="Design samotného CD" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/cd cover/cd_obal.jpg" alt="Rozložený obal CD" loading="lazy">
+            <section id="mockupy">
+                <h2 class="kategorie-nadpis">Mockupy</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/killer bee/vizitky.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/vizitky.jpg" alt="Mockup vizitek značky Killer Bee" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/killer bee/razitko.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/razitko.jpg" alt="Mockup firemního razítka" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/killer bee/store_front.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/store_front.png" alt="Mockup výlohy obchodu Killer Bee" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/killer bee/cedule.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/cedule.png" alt="Mockup venkovní reklamní cedule" loading="lazy">
+                    </div>
                 </div>
             </section>
 
-            <h2 class="kategorie-nadpis" id="ilustrace">Ilustrace & Magazín</h2>
-            <section class="gallery-container">
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/ilustrace/magazin_1.jpg" alt="Design strany magazínu 1" loading="lazy">
+            <section id="fotografie">
+                <h2 class="kategorie-nadpis">Fotografie</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/fotky/5548de152771453.632383ae49acb.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/fotky/5548de152771453.632383ae49acb.jpg" alt="Umělecká fotografie architektury" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/fotky/66297e152771453.632383ae462b8.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/fotky/66297e152771453.632383ae462b8.jpg" alt="Umělecká portrétní fotografie" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/fotky/a51ce0152771453.632383ae46b3b.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/fotky/a51ce0152771453.632383ae46b3b.jpg" alt="Atmosférická fotografie" loading="lazy">
+                    </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/ilustrace/magazin_2.jpg" alt="Design strany magazínu 2" loading="lazy">
+            </section>
+
+            <section id="obaly">
+                <h2 class="kategorie-nadpis">Obaly hudebních alb</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/cd cover/main_cover.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cd cover/main_cover.jpg" alt="Hlavní grafický návrh obalu CD" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/cd cover/cd.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cd cover/cd.jpg" alt="Design potisku samotného CD" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/cd cover/cd_obal.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cd cover/cd_obal.jpg" alt="Rozložený booklet a obal CD" loading="lazy">
+                    </div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                    <img src="./images/ilustrace/magazin_2_banner.jpg" alt="Banner magazínu" loading="lazy">
+            </section>
+
+            <section id="ilustrace">
+                <h2 class="kategorie-nadpis">Ilustrace & Magazín</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/ilustrace/magazin_1.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/ilustrace/magazin_1.jpg" alt="Design strany tištěného magazínu" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/ilustrace/magazin_2.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/ilustrace/magazin_2.jpg" alt="Sazba a design strany magazínu" loading="lazy">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(this, 'image')">
+                        <img srcset="./images/ilustrace/magazin_2_banner.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/ilustrace/magazin_2_banner.jpg" alt="Propagační banner magazínu" loading="lazy">
+                    </div>
                 </div>
             </section>
 
         </div>
 
-        <h2 class="kategorie-nadpis" id="ui/ux">Ukázka UI/UX</h2>
-        <section class="gallery-container">
-            <div class="dvoji-video-kontejner">
-                <div class="gallery-item rovnocenne-video" onclick="openLightbox(this, 'video')">
-                    <video autoplay loop muted playsinline>
-                        <source src="./videos/mobil.mp4" type="video/mp4">
-                        Váš prohlížeč nepodporuje přehrávání videa.
-                    </video>
-                </div>
-                <div class="gallery-item rovnocenne-video" onclick="openLightbox(this, 'video')">
-                    <video autoplay loop muted playsinline>
-                        <source src="./videos/pc.mp4" type="video/mp4">
-                        Váš prohlížeč nepodporuje přehrávání videa.
-                    </video>
+        <section id="ui-ux">
+            <h2 class="kategorie-nadpis">Ukázka UI/UX</h2>
+            <div class="gallery-container">
+                <div class="dvoji-video-kontejner">
+                    <div class="gallery-item rovnocenne-video" onclick="openLightbox(this, 'video')">
+                        <video class="lazy-video" loop muted playsinline preload="none">
+                            <source src="./videos/mobil.mp4" type="video/mp4">
+                            Váš prohlížeč nepodporuje přehrávání videa.
+                        </video>
+                    </div>
+                    <div class="gallery-item rovnocenne-video" onclick="openLightbox(this, 'video')">
+                        <video class="lazy-video" loop muted playsinline preload="none">
+                            <source src="./videos/pc.mp4" type="video/mp4">
+                            Váš prohlížeč nepodporuje přehrávání videa.
+                        </video>
+                    </div>
                 </div>
             </div>
         </section>
@@ -166,7 +181,7 @@
 
             <a href="./pdf/logomanual_V1.4.pdf" target="_blank" class="manual-odkaz">
                 <div class="manual-nahled-kontejner">
-                    <img src="./images/fotky/logomanual_titul.png" alt="Logomanuál - Titulní strana">
+                    <img src="./images/fotky/logomanual_titul.png" alt="Titulní strana logomanuálu" loading="lazy">
 
                     <div class="manual-overlay">
                         <span>Otevřít PDF</span>
@@ -177,13 +192,14 @@
 
         <section class="contact-section" id="kontakt">
             <h2>Kontakt</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form id="kontakt-formular" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="ef46d541-89c2-4452-ac84-3308bef85b8a">
                 <input type="text" name="name" autocomplete="name" placeholder="Vaše jméno" required>
                 <input type="email" name="email" autocomplete="email" placeholder="Váš email" required>
                 <textarea name="message" placeholder="Vaše zpráva" required></textarea>
                 <button type="submit">Odeslat zprávu</button>
             </form>
+            <div id="zprava-uspech" class="formular-zprava">Děkuji vám. Vaše zpráva byla úspěšně odeslána. Brzy se vám ozvu.</div>
         </section>
 
     </main>
@@ -198,58 +214,6 @@
         </div>
     </div>
 
-    <script>
-        const hamburger = document.getElementById('hamburger-menu');
-        const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-odkazy a');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        const lightbox = document.getElementById('lightbox');
-        const mediaContainer = document.getElementById('lightbox-media-container');
-
-        function openLightbox(element, type) {
-            mediaContainer.innerHTML = '';
-
-            if (type === 'image') {
-                const imgSource = element.querySelector('img').src;
-                const newImg = document.createElement('img');
-                newImg.src = imgSource;
-                newImg.className = 'lightbox-content';
-                mediaContainer.appendChild(newImg);
-            }
-            else if (type === 'video') {
-                const videoSource = element.querySelector('source').src;
-                const newVideo = document.createElement('video');
-                newVideo.src = videoSource;
-                newVideo.className = 'lightbox-content';
-                newVideo.controls = true;
-                newVideo.autoplay = true;
-                mediaContainer.appendChild(newVideo);
-            }
-
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox(event) {
-            if (event.target === lightbox || event.target.className === 'close-btn') {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                mediaContainer.innerHTML = '';
-            }
-        }
-    </script>
+    <script src="./assets/script.js" defer></script>
 </body>
-
 </html>
