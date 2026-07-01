@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio Jáchyma Vondráčka. Profesionální 3D modely, grafický design, UI/UX, ilustrace a fotografie.">
     <title>Portfolio - Jáchym Vondráček</title>
-
     <link rel="preload" href="./images/fotky/profil_fotka.png" as="image">
     <link rel="icon" href="./images/favicon/favicon_.png">
     <link rel="stylesheet" href="./assets/style.css">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="animovane-pozadi" aria-hidden="true"></div>
-
     <nav class="hlavni-navigace">
         <div class="hamburger" id="hamburger-menu" aria-label="Otevřít navigaci" aria-expanded="false" role="button" tabindex="0">
             <span class="bar"></span>
@@ -26,22 +21,21 @@
             <span class="bar"></span>
         </div>
         <div class="nav-odkazy" id="nav-menu">
-            <a href="#uvod">Úvod</a>
-            <a href="#o-mne">O mně</a>
-            <a href="#3D_modely">3D Modely</a>
-            <a href="#plakaty">Plakáty</a>
-            <a href="#mockupy">Mockupy</a>
-            <a href="#fotografie">Fotografie</a>
-            <a href="#obaly">Obaly</a>
-            <a href="#ilustrace">Ilustrace</a>
-            <a href="#ui-ux">UI/UX</a>
-            <a href="#kontakt">Kontakt</a>
+            <a href="#uvod" data-i18n="nav-uvod">Úvod</a>
+            <a href="#o-mne" data-i18n="nav-omne">O mně</a>
+            <a href="#3D_modely" data-i18n="nav-3d">3D Modely</a>
+            <a href="#plakaty" data-i18n="nav-plakaty">Plakáty</a>
+            <a href="#mockupy" data-i18n="nav-mockupy">Mockupy</a>
+            <a href="#fotografie" data-i18n="nav-fotografie">Fotografie</a>
+            <a href="#obaly" data-i18n="nav-obaly">Obaly</a>
+            <a href="#ilustrace" data-i18n="nav-ilustrace">Ilustrace</a>
+            <a href="#ui-ux" data-i18n="nav-ui">UI/UX</a>
+            <a href="#kontakt" data-i18n="nav-kontakt">Kontakt</a>
+            <button id="language-toggle" class="lang-btn" aria-label="Přepnout jazyk">EN</button>
         </div>
     </nav>
-
-   <header id="uvod">
+    <header id="uvod">
         <img src="./images/fotky/profil_fotka.png" alt="Portrét - Jáchym Vondráček" class="profilova-fotka">
-        
         <h1 id="jmeno-autora">Jáchym Vondráček</h1>
         <a href="https://www.linkedin.com/in/jáchym-vondráček-9a1624200" target="_blank" class="linkedin-odkaz" title="Můj LinkedIn profil">
             <svg class="linkedin-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -49,19 +43,15 @@
             </svg>
         </a>
     </header>
-
     <main>
-        
         <section class="o-mne-sekce" id="o-mne">
-            <h2>O mně</h2>
-            <p>Jsem tvůrce s okem pro detail a neústupnou touhou po dokonalosti. Ve své práci se snažím propojovat moderní technologie s čistou estetikou, ať už se jedná o tvorbu 3D modelů, uživatelských rozhraní nebo klasický grafický design.</p>
-            <p>Věřím, že každý projekt vyžaduje individuální přístup a precizní provedení, od prvotního konceptu až po finální tah. Mé portfolio je odrazem této filozofie – sbírkou děl, kterým jsem věnoval svou plnou pozornost a nasazení.</p>
+            <h2 data-i18n="omne-nadpis">O mně</h2>
+            <p data-i18n="omne-p1">Jsem tvůrce s okem pro detail a neústupnou touhou po dokonalosti. Ve své práci se snažím propojovat moderní technologie s čistou estetikou, ať už se jedná o tvorbu 3D modelů, uživatelských rozhraní nebo klasický grafický design.</p>
+            <p data-i18n="omne-p2">Věřím, že každý projekt vyžaduje individuální přístup a precizní provedení, od prvotního konceptu až po finální tah. Mé portfolio je odrazem této filozofie – sbírkou děl, kterým jsem věnoval svou plnou pozornost a nasazení.</p>
         </section>
-
         <div id="galerie">
-            
             <section id="3D_modely">
-                <h2 class="kategorie-nadpis">3D Modely</h2>
+                <h2 class="kategorie-nadpis" data-i18n="nadpis-3d">3D Modely</h2>
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
                         <img srcset="./images/3D_modely/3D_cerealie.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/3D_modely/3D_cerealie.png" alt="3D vizualizace balení cereálií" loading="lazy">
@@ -71,45 +61,42 @@
                     </div>
                 </div>
             </section>
-
             <section id="plakaty">
-                <h2 class="kategorie-nadpis">Plakáty</h2>
+                <h2 class="kategorie-nadpis" data-i18n="nadpis-plakaty">Plakáty</h2>
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/killer bee/plakát.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/plakát.jpg" alt="Grafický návrh plakátu Killer Bee 1" loading="lazy">
+                        <img srcset="./images/killerbee/plakát.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killerbee/plakát.jpg" alt="Grafický návrh plakátu Killer Bee 1" loading="lazy">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/killer bee/plakat_2.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/plakat_2.jpg" alt="Grafický návrh plakátu Killer Bee 2" loading="lazy">
+                        <img srcset="./images/killerbee/plakat_2.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killerbee/plakat_2.jpg" alt="Grafický návrh plakátu Killer Bee 2" loading="lazy">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/killer bee/plakat_3.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/plakat_3.jpg" alt="Grafický návrh plakátu Killer Bee 3" loading="lazy">
+                        <img srcset="./images/killerbee/plakat_3.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killerbee/plakat_3.jpg" alt="Grafický návrh plakátu Killer Bee 3" loading="lazy">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/killer bee/plakat4.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/plakat4.png" alt="Grafický návrh plakátu Killer Bee 4" loading="lazy">
+                        <img srcset="./images/killerbee/plakat4.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killerbee/plakat4.png" alt="Grafický návrh plakátu Killer Bee 4" loading="lazy">
                     </div>
                 </div>
             </section>
-
             <section id="mockupy">
-                <h2 class="kategorie-nadpis">Mockupy</h2>
+                <h2 class="kategorie-nadpis" data-i18n="nadpis-mockupy">Mockupy</h2>
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/killer bee/vizitky.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/vizitky.jpg" alt="Mockup vizitek značky Killer Bee" loading="lazy">
+                        <img srcset="./images/killerbee/vizitky.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killerbee/vizitky.jpg" alt="Mockup vizitek značky Killer Bee" loading="lazy">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/killer bee/razitko.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/razitko.jpg" alt="Mockup firemního razítka" loading="lazy">
+                        <img srcset="./images/killerbee/razitko.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killerbee/razitko.jpg" alt="Mockup firemního razítka" loading="lazy">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/killer bee/store_front.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/store_front.png" alt="Mockup výlohy obchodu Killer Bee" loading="lazy">
+                        <img srcset="./images/killerbee/store_front.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killerbee/store_front.png" alt="Mockup výlohy obchodu Killer Bee" loading="lazy">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/killer bee/cedule.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killer bee/cedule.png" alt="Mockup venkovní reklamní cedule" loading="lazy">
+                        <img srcset="./images/killerbee/cedule.png 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/killerbee/cedule.png" alt="Mockup venkovní reklamní cedule" loading="lazy">
                     </div>
                 </div>
             </section>
-
             <section id="fotografie">
-                <h2 class="kategorie-nadpis">Fotografie</h2>
+                <h2 class="kategorie-nadpis" data-i18n="nadpis-fotografie">Fotografie</h2>
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
                         <img srcset="./images/fotky/5548de152771453.632383ae49acb.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/fotky/5548de152771453.632383ae49acb.jpg" alt="Umělecká fotografie architektury" loading="lazy">
@@ -122,24 +109,22 @@
                     </div>
                 </div>
             </section>
-
             <section id="obaly">
-                <h2 class="kategorie-nadpis">Obaly hudebních alb</h2>
+                <h2 class="kategorie-nadpis" data-i18n="nadpis-obaly">Obaly hudebních alb</h2>
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/cd cover/main_cover.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cd cover/main_cover.jpg" alt="Hlavní grafický návrh obalu CD" loading="lazy">
+                        <img srcset="./images/cdcover/main_cover.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cdcover/main_cover.jpg" alt="Hlavní grafický návrh obalu CD" loading="lazy">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/cd cover/cd.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cd cover/cd.jpg" alt="Design potisku samotného CD" loading="lazy">
+                        <img srcset="./images/cdcover/cd.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cdcover/cd.jpg" alt="Design potisku samotného CD" loading="lazy">
                     </div>
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
-                        <img srcset="./images/cd cover/cd_obal.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cd cover/cd_obal.jpg" alt="Rozložený booklet a obal CD" loading="lazy">
+                        <img srcset="./images/cdcover/cd_obal.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/cdcover/cd_obal.jpg" alt="Rozložený booklet a obal CD" loading="lazy">
                     </div>
                 </div>
             </section>
-
             <section id="ilustrace">
-                <h2 class="kategorie-nadpis">Ilustrace & Magazín</h2>
+                <h2 class="kategorie-nadpis" data-i18n="nadpis-ilustrace">Ilustrace & Magazín</h2>
                 <div class="gallery-container">
                     <div class="gallery-item" onclick="openLightbox(this, 'image')">
                         <img srcset="./images/ilustrace/magazin_1.jpg 800w" sizes="(max-width: 600px) 100vw, 33vw" src="./images/ilustrace/magazin_1.jpg" alt="Design strany tištěného magazínu" loading="lazy">
@@ -152,68 +137,55 @@
                     </div>
                 </div>
             </section>
-
         </div>
-
         <section id="ui-ux">
-            <h2 class="kategorie-nadpis">Ukázka UI/UX</h2>
+            <h2 class="kategorie-nadpis" data-i18n="nadpis-ui">Ukázka UI/UX</h2>
             <div class="gallery-container">
                 <div class="dvoji-video-kontejner">
                     <div class="gallery-item rovnocenne-video" onclick="openLightbox(this, 'video')">
                         <video class="lazy-video" loop muted playsinline preload="none">
                             <source src="./videos/mobil.mp4" type="video/mp4">
-                            Váš prohlížeč nepodporuje přehrávání videa.
                         </video>
                     </div>
                     <div class="gallery-item rovnocenne-video" onclick="openLightbox(this, 'video')">
                         <video class="lazy-video" loop muted playsinline preload="none">
                             <source src="./videos/pc.mp4" type="video/mp4">
-                            Váš prohlížeč nepodporuje přehrávání videa.
                         </video>
                     </div>
                 </div>
             </div>
         </section>
-
         <section class="manual-sekce" id="manual">
-            <h2>Logomanuál</h2>
-            <p>Kliknutím na náhled níže otevřete kompletní specifikaci vizuální identity v PDF formátu.</p>
-
+            <h2 data-i18n="nadpis-manual">Logomanuál</h2>
+            <p data-i18n="manual-p">Kliknutím na náhled níže otevřete kompletní specifikaci vizuální identity v PDF formátu.</p>
             <a href="./pdf/logomanual_V1.4.pdf" target="_blank" class="manual-odkaz">
                 <div class="manual-nahled-kontejner">
                     <img src="./images/fotky/logomanual_titul.png" alt="Titulní strana logomanuálu" loading="lazy">
-
                     <div class="manual-overlay">
-                        <span>Otevřít PDF</span>
+                        <span data-i18n="manual-btn">Otevřít PDF</span>
                     </div>
                 </div>
             </a>
         </section>
-
         <section class="contact-section" id="kontakt">
-            <h2>Kontakt</h2>
+            <h2 data-i18n="nadpis-kontakt">Kontakt</h2>
             <form id="kontakt-formular" action="https://api.web3forms.com/submit" method="POST">
                 <input type="hidden" name="access_key" value="ef46d541-89c2-4452-ac84-3308bef85b8a">
-                <input type="text" name="name" autocomplete="name" placeholder="Vaše jméno" required>
-                <input type="email" name="email" autocomplete="email" placeholder="Váš email" required>
-                <textarea name="message" placeholder="Vaše zpráva" required></textarea>
-                <button type="submit">Odeslat zprávu</button>
+                <input type="text" name="name" autocomplete="name" placeholder="Vaše jméno" data-i18n="form-jmeno" required>
+                <input type="email" name="email" autocomplete="email" placeholder="Váš email" data-i18n="form-email" required>
+                <textarea name="message" placeholder="Vaše zpráva" data-i18n="form-zprava" required></textarea>
+                <button type="submit" data-i18n="form-btn">Odeslat zprávu</button>
             </form>
-            <div id="zprava-uspech" class="formular-zprava">Děkuji vám. Vaše zpráva byla úspěšně odeslána. Brzy se vám ozvu.</div>
+            <div id="zprava-uspech" class="formular-zprava" data-i18n="form-uspech">Děkuji vám. Vaše zpráva byla úspěšně odeslána. Brzy se vám ozvu.</div>
         </section>
-
     </main>
-
     <footer>
-        <p>&copy; 2026 Jáchym Vondráček. Všechna práva vyhrazena.</p>
+        <p data-i18n="footer-text">&copy; 2026 Jáchym Vondráček. Všechna práva vyhrazena.</p>
     </footer>
-
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
         <span class="close-btn">&times;</span>
-        <div id="lightbox-media-container">
-        </div>
+        <div id="lightbox-media-container"></div>
     </div>
-
     <script src="./assets/script.js" defer></script>
 </body>
 </html>

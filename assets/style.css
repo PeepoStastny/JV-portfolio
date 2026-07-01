@@ -448,6 +448,25 @@ footer {
     font-weight: 300;
 }
 
+.lang-btn {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    padding: 4px 10px;
+    margin-left: 15px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    transform: translateY(-3px);
+}
+
+.lang-btn:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
 @media (prefers-reduced-motion: reduce) {
     body, .animovane-pozadi {
         animation: none;
@@ -481,6 +500,7 @@ footer {
         padding-top: 40px;
         transition: left 0.4s ease;
         z-index: 99;
+        overflow-y: auto;
     }
 
     .nav-odkazy.active {
@@ -502,6 +522,16 @@ footer {
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
+    }
+    
+    .lang-btn {
+        position: absolute;
+        top: 25px; /* Výška, která vizuálně ladí s horní částí menu */
+        right: 25px; /* Bezpečná vzdálenost od pravého okraje */
+        margin: 0; /* Zruší jakékoliv předchozí mezery */
+        transform: none; /* Anuluje veškeré posuny */
+        width: auto; /* Tlačítko zabere jen tolik místa, kolik potřebuje */
+        display: inline-block; /* Zajistí správné vykreslení okrajů */
     }
 }
 
