@@ -98,6 +98,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 65px;
+    display: flex;
+    justify-content: center; /* Původně pro centrování všeho */
+    align-items: center;
+    padding: 0 25px; /* Přidáme vnitřní odsazení pro tlačítko */
 }
 
 .nav-odkazy {
@@ -449,6 +453,9 @@ footer {
 }
 
 .lang-btn {
+    position: absolute;
+    right: 25px;
+    margin: 0;
     background: transparent;
     color: var(--text-color);
     border: 1px solid var(--text-color);
@@ -501,6 +508,8 @@ footer {
         transition: left 0.4s ease;
         z-index: 99;
         overflow-y: auto;
+        flex-wrap: nowrap; 
+        overflow-y: auto; 
     }
 
     .nav-odkazy.active {
@@ -525,13 +534,10 @@ footer {
     }
     
     .lang-btn {
-        position: absolute;
-        top: 25px; /* Výška, která vizuálně ladí s horní částí menu */
-        right: 25px; /* Bezpečná vzdálenost od pravého okraje */
-        margin: 0; /* Zruší jakékoliv předchozí mezery */
-        transform: none; /* Anuluje veškeré posuny */
-        width: auto; /* Tlačítko zabere jen tolik místa, kolik potřebuje */
-        display: inline-block; /* Zajistí správné vykreslení okrajů */
+       position: absolute;
+        top: 25px;
+        right: 70px; 
+        transform: none;
     }
 }
 
